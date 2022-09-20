@@ -1,0 +1,36 @@
+{
+    "name": "@atomico/vue",
+    "version": "0.0.0",
+    "description": "Wrapper and utilities to integrate Atomico in Vue",
+    "type": "module",
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {},
+    "keywords": [],
+    "devDependencies": {
+        "@atomico/exports": "^0.36.1",
+        "@atomico/tsconfig": "^1.0.0",
+        "typescript": "^4.8.3"
+    },
+    "dependencies": {
+        "@atomico/wrapper": "^1.0.0",
+        "atomico": "^1.63.1",
+        "vue": "^3.2.39"
+    },
+    "peerDependencies": {
+        "@atomico/wrapper": "^1.0.0",
+        "atomico": "^1.63.1",
+        "vue": "^3.2.39"
+    },
+    "prettier": {
+        "tabWidth": 4,
+        "singleQuote": false
+    },
+    "author": "UpperCod",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/atomicojs/vue/issues"
+    },
+    "homepage": "https://github.com/atomicojs/vue#readme"
+}
