@@ -1,4 +1,4 @@
-import { CustomElementStatic } from "@atomico/wrapper/types";
+import { CustomElementStatic, GetProps } from "@atomico/wrapper/types";
 import { h, defineComponent } from "vue";
 
 export const wrapper = <Base extends CustomElementStatic>(
@@ -6,7 +6,7 @@ export const wrapper = <Base extends CustomElementStatic>(
     component: Base,
     options?: ElementDefinitionOptions
 ) =>
-    defineComponent<Base extends { "##props": infer P } ? P : any>({
+    defineComponent<GetProps<Base>>({
         props: Object.entries(component.props).reduce(
             (props, [index, value]) => ({
                 ...props,
