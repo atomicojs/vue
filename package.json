@@ -1,6 +1,6 @@
 {
     "name": "@atomico/vue",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "Wrapper and utilities to integrate Atomico in Vue",
     "type": "module",
     "publishConfig": {
