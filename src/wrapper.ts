@@ -1,10 +1,10 @@
+import { CustomElementStatic } from "@atomico/wrapper/types";
 import { h, defineComponent } from "vue";
 
-export const wrapper = <
-    Base extends CustomElementConstructor & { "##props": any; props: any }
->(
+export const wrapper = <Base extends CustomElementStatic>(
     tagName: string,
-    component: Base
+    component: Base,
+    options?: ElementDefinitionOptions
 ) =>
     defineComponent<Base extends { "##props": infer P } ? P : any>({
         props: Object.entries(component.props).reduce(
@@ -15,6 +15,8 @@ export const wrapper = <
             {}
         ) as any,
         render(props) {
-            return h(tagName, { ...props }, this.$slots);
+            const nextProps = { ...props };
+            if (options) nextProps.is = tagName;
+            return h(options?.extends || tagName, nextProps, this.$slots);
         },
     });
