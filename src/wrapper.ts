@@ -1,14 +1,12 @@
-import { Props } from "atomico";
-import { AtomicoStatic } from "atomico/types/dom";
 import { h, defineComponent } from "vue";
 
 export const wrapper = <
-    Base extends CustomElementConstructor & AtomicoStatic<any>
+    Base extends CustomElementConstructor & { "##props": any; props: any }
 >(
     tagName: string,
     component: Base
 ) =>
-    defineComponent<Props<Base>>({
+    defineComponent<Base extends { "##props": infer P } ? P : any>({
         props: Object.entries(component.props).reduce(
             (props, [index, value]) => ({
                 ...props,
@@ -16,7 +14,7 @@ export const wrapper = <
             }),
             {}
         ) as any,
-        render(props: Props<Base>) {
+        render(props) {
             return h(tagName, { ...props }, this.$slots);
         },
     });
