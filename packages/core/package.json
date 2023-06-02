@@ -12,18 +12,17 @@
     },
     "keywords": [],
     "devDependencies": {
-        "@atomico/exports": "^0.37.0",
         "@atomico/tsconfig": "^1.0.0",
         "typescript": "^4.8.3"
     },
     "dependencies": {
         "@atomico/wrapper": "^1.2.0",
-        "atomico": "^1.63.1",
-        "vue": "^3.2.39"
+        "atomico": "latest",
+        "vue": "*"
     },
     "peerDependencies": {
-        "atomico": "^1.63.1",
-        "vue": "^3.2.39"
+        "atomico": "latest",
+        "vue": "*"
     },
     "prettier": {
         "tabWidth": 4,

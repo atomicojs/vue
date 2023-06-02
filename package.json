@@ -2,7 +2,11 @@
   "workspaces": [
     "packages/*"
   ],
-  "devDependencies": {},
+  "devDependencies": {
+    "vite": "^4.3.5",
+    "@atomico/run": "^0.9.2",
+    "@atomico/vite": "^2.9.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
