@@ -9,7 +9,7 @@
     "scripts": {
         "build:types": "tsc",
         "build:compile": "library src/**",
-        "build:exports": "library lib/** types/**",
+        "build:exports": "exports lib/** types/**",
         "prepublishOnly": "npm run exports"
     },
     "keywords": [],
