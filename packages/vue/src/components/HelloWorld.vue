@@ -1,12 +1,25 @@
 <script setup lang="ts">
+import { reactive } from 'vue'
+import {ComponentVue} from  "../components/atomico/hello";
+
 defineProps<{
   msg: string
 }>()
+
+let count = reactive({value: 0});
+
+
+const handler = ()=>{
+  count.value +=1
+}
+
+
 </script>
 
 <template>
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
+    <ComponentVue :value="count.value" @click="handler"></ComponentVue>
     <h3>
       You’ve successfully created a project with
       <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
