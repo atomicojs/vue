@@ -3,6 +3,6 @@
     "include": ["src/**/*"],
     "compilerOptions": {
         "outDir": "types",
-        "moduleResolution": "node",
+        "moduleResolution": "node"
     }
 }

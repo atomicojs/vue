@@ -48,5 +48,5 @@
             ]
         }
     },
-    "types": "./types/index.d.ts"
+    "types": "types/index.d.ts"
 }
