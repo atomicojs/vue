@@ -9,7 +9,7 @@
     "vite": "^4.3.9"
   },
   "scripts": {
-    "build": "run build publish -s"
+    "build": "run build:* build publish -s"
   },
   "repository": {
     "type": "git",
