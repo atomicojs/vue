@@ -9,7 +9,7 @@
     "vite": "^4.3.9"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "run build publish -s"
   },
   "repository": {
     "type": "git",
